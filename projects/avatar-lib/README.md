@@ -2,7 +2,7 @@
 
 This library was generated with version 11.2.14. Image upload can create by custom via your first and second name. It will generate canvas Image. Otherwise you can upload your custom one.
 
-![Alt text](assets/pen.svg?raw=true "avatar png")
+![Alt text](https://github.com/ansajinsatheesan/avatar-lib/blob/master/projects/avatar-lib/screenshot-lib.png?raw=true)
 
 ## Use
 
