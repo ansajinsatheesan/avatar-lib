@@ -1,0 +1,48 @@
+<!-- <div class="removeClass"> -->    
+    <div class="pic-ava-wrapper" [ngClass]="configuration.customClass">
+        <div class="pic-ava-wrap">
+            <div class="pic-upld">
+                <div class="imgg">
+                    <div class="avatar-upload" [class.bordererror]="error">
+                        <div class="avatar-edit">
+                            <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" (change)="onChangeImage($event);"/>
+                            <label for="imageUpload">
+                                <img [src]="configuration.editIcon">
+                            </label>
+                        </div>
+                        <div class="avatar-preview">
+                            <div id="imagePreview" [ngStyle]="{'background-image': !userSrc ? 'url(\'assets/user.svg\')' : 'url(' + userSrc +')'}"></div>
+                            <!-- <div id="imagePreview" [ngStyle]="{ 'background-image': 'url(' + userSrc ? userSrc : '' + ')'}"></div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pic-cus-ava">
+                <div class="ava-chooser">
+                    <div class="make-ava">
+                        <div class="avt-backwrap" [class.bordererror]="error">
+                            <ng-container *ngIf="avatarSrc">
+                                <div class="gen-bg" [ngStyle]="{ 'background-image': 'url(' + avatarSrc + ')'}"></div>
+                            </ng-container>
+                        </div>
+                    </div>
+                    <div class="col-list">
+                        <ul>
+                            <li *ngFor="let item of backgroundColors; let i = index">
+                                <span [class.active]="item.active" [style.border-color]="item.color"  [style.background-color]="item.color" (click)="onSelectedAvatarColor(item, i)"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="chk-boxx">
+            <div class="boxx">
+                <span [class.active]="chooseId === 1" (click)="onClickChoosePic(1)"></span> 
+            </div>
+            <div class="boxx">
+                <span [class.active]="chooseId === 2" (click)="onClickChoosePic(2)"></span>
+            </div>
+        </div>
+    </div>
+<!-- </div> -->
